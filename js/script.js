@@ -1,7 +1,7 @@
 $(function(){
 
 $(window).on('load' , function(){
-    $('.loader').fadeOut(3000)
+    $('.loader').fadeOut(400)
 })
     
    $('body').css('paddingTop' , $('.nav-fixed').innerHeight())

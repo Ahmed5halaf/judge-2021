@@ -1,17 +1,3 @@
-/* normailes 
-FONT
-الفيديو 
-وسكرول
-العداد 40
-icon practice
-card
-owl-slider
-pope        
-animtiom play viduo
-anmtion window on scroll
-نزبط ال ميديا
-add class active
-*/
 * , html{
     padding: 0;
     margin: 0;
@@ -24,6 +10,7 @@ add class active
 body{
     font-family: "Poppins", Arial, sans-serif;
     position: relative;
+    overflow-x: hidden;
 
 }
 .loader{
@@ -169,11 +156,12 @@ header hr {
 .service h3 a{
     color: #fff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
 }
 .service p {
     color: #302f2f;
     margin-top: 10px;
+    font-size: 15px;
 }
 
 /* End header */
@@ -438,6 +426,7 @@ input
 }
 .case-box{
     position: relative;
+    width: 100%;
     height: 300px;
 }
 .case-box img{
@@ -664,13 +653,13 @@ footer{
 .scoial a:not(:first-child){
     margin-left: 15px;
 }
-.scoial i{
-    padding: 14px;
+.scoial i {
+    padding: 12px;
     color: var(--main-color);
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 49px;
     line-height: 25px;
     text-align: center;
 }
