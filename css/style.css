@@ -66,9 +66,12 @@ nav{
     background-color: #ccc;
     position: fixed;
     top: 0;
+    left: 0;
+   max-width: 100%;
     height: 80px;
     padding: 20px 0;
     color: #000;
+
 }
 
 .nav-fixed a ,
@@ -85,7 +88,7 @@ nav .logo span{
 }
 
 .list-item li a{
-    margin-left: 35px;
+    margin-left: 16px;
     transition: color .2s ease-in-out;
 }
 .active{
@@ -156,12 +159,12 @@ header hr {
 .service h3 a{
     color: #fff;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
 .service p {
     color: #302f2f;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* End header */
@@ -426,7 +429,6 @@ input
 }
 .case-box{
     position: relative;
-    width: 100%;
     height: 300px;
 }
 .case-box img{
@@ -518,7 +520,7 @@ input
 }
 .card-text{
     position: absolute;
-    top: 37%;
+    top: 28%;
     left: 0;
     width: 150px;
     height: 80px;
@@ -576,7 +578,7 @@ input
     display: flex;
 }
 .sub-img{
-    width:206px;
+    width:170px;
     position: relative;
     cursor:zoom-in;
     display: inline-block;  
@@ -658,8 +660,8 @@ footer{
     color: var(--main-color);
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
-    width: 48px;
-    height: 49px;
+    width: 49px;
+    height: 50px;
     line-height: 25px;
     text-align: center;
 }
@@ -702,9 +704,9 @@ footer ul a {
 /* End footer */
 /* **********************responsev**************** */
 /* Start TRablet & under */
-@media (max-width: 768px){
+@media screen and (max-width: 992px){
     .container-md{
-        width: 90%;
+        width: 97%;
         margin: 0 auto;
     }
     .text-center.about{
@@ -765,7 +767,15 @@ footer ul a {
     }
     nav .list-item{
         display: none;
-        margin: 15px 0 0 0;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 15px;
+        background-color: #000;
+        margin-bottom: 15px;
+        z-index: 777;
     }
     nav ul li {
         display: block;
@@ -774,6 +784,7 @@ footer ul a {
 
     .list-item li a {
         margin: 0;
+        color: #fff;
     }
 
     .head-box span {
@@ -855,9 +866,9 @@ footer ul a {
         font-weight: normal;
     }
 
-   
     .case-box{
         margin: auto;
+        width: 100%;
     }
     .our-blog-card{
         width: 450px;
@@ -867,7 +878,7 @@ footer ul a {
         height: 300px;
     }
     .card-text{
-        top: 51.25%;
+        top: 51.48%;
     }
     .our-blog-card h5{
         font-size:20px;
@@ -923,11 +934,12 @@ footer ul a {
 
 
 /* Start Mobile */
-@media(max-width: 600px){
+@media screen and (max-width: 600px){
 
     .container-md{
         width: 95%;
         margin: 0 auto;
+        position: relative;
     }
     .grid-md-3{
         display: grid;
@@ -940,6 +952,10 @@ footer ul a {
     .grid-md-7{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+    nav .list-item{
+        top: 50px;
+        margin: 0;
     }
     .head-box{
         height: 300px;
@@ -961,20 +977,37 @@ footer ul a {
         width: 317px;
         height: 376px;
         margin-top: 65px;
+        margin-left: 100px;
     }
     .about-text{
         width: 450px;
         height: 350px;
         margin: 0 0 15% 10%;
     }
-
+    .about-text p ,
+    .practice-box p{
+        width: 58%;
+        font-size: 14px;
+    }
+    .practice-box p{
+        width: 60%;
+        margin: 0 auto;
+    }
     .about-viduo {
         top: 28%;
         left: 59%;
     }
-  
+    .head-section h2{
+        font-size: 27px;
+    }
     .title-heading{
         font-size: 30px;
+    }
+
+    .booking{
+        max-width: 100%;
+        margin: 50px auto;
+        background-position: center center;
     }
     .sub-item{
         display: grid;
@@ -983,17 +1016,60 @@ footer ul a {
     .sub-img{
         width:100%;
     }
+  
     .enter-sub {
+        max-width: 483px;
         padding: 15px;
     }
     .enter-sub form {
         margin-bottom: 15px;
+        font-size: 14px;
     }
     .enter-sub input{
-        width: 180px;
+        width: 250px;
+    }
+    .enter-sub button {
+        height: 50px;
+        width: 120px;
+        font-size: 16px;
     }
     .enter-sub h3{
         margin-bottom: 15px;
+    }
+    .case-box{
+        margin: 50px auto;
+    }
+    .our-card-img {
+        max-width: 450px;
+    }
+    .our-blog-card h5 {
+        font-size: 18px;
+        color: #000;
+        max-width: 335px;
+    }
+    .our-blog-card p{
+        max-width: 450px;
+    } 
+    .card-text {
+        top: 48.5%;
+    }
+    .popup-gallery{
+        width: 90%;
+        margin: 0 auto;
+    }
+   
+  
+}
+
+@media screen and (max-width:500px){
+    .about-img{
+        margin-left: 18px;
+    }
+    .enter-sub input {
+        width: 190px;
+    }
+    .enter-sub h3{
+        font-size: 20px;
     }
 }
 /*End Mobile */
