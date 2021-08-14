@@ -10,8 +10,6 @@
 body{
     font-family: "Poppins", Arial, sans-serif;
     position: relative;
-    overflow-x: hidden;
-
 }
 .loader{
     width: 100%;
@@ -67,7 +65,9 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-   max-width: 100%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
     height: 80px;
     padding: 20px 0;
     color: #000;
@@ -733,6 +733,7 @@ footer ul a {
     .head-section h2{
         font-size: 30px;
     }
+  
     header , nav{
         height: auto;
     }
@@ -928,6 +929,9 @@ footer ul a {
     .ft-title {
         font-size: 14px;
     }
+    .nav-fixed{
+        width: 100%;
+    }
 }
 /*End Tablet & under */
 
@@ -935,11 +939,10 @@ footer ul a {
 
 /* Start Mobile */
 @media screen and (max-width: 600px){
-
+   
     .container-md{
         width: 95%;
         margin: 0 auto;
-        position: relative;
     }
     .grid-md-3{
         display: grid;
@@ -1039,6 +1042,9 @@ footer ul a {
     .case-box{
         margin: 50px auto;
     }
+    .our-blog-card{
+        width: 390px;
+    }
     .our-card-img {
         max-width: 450px;
     }
@@ -1062,6 +1068,7 @@ footer ul a {
 }
 
 @media screen and (max-width:500px){
+    
     .about-img{
         margin-left: 18px;
     }
