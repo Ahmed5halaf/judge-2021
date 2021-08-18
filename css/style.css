@@ -518,7 +518,7 @@ input
 }
 .card-text{
     position: absolute;
-    top: 37%;
+    top: 27%;
     left: 0;
     width: 150px;
     height: 80px;
@@ -576,7 +576,7 @@ input
     display: flex;
 }
 .sub-img{
-    width:206px;
+    width:315px;
     position: relative;
     cursor:zoom-in;
     display: inline-block;  
@@ -702,51 +702,46 @@ footer ul a {
 /* End footer */
 /* **********************responsev**************** */
 /* ********************************* */
-@media(min-width: 1440px){
-    .card-text{
-        top: 42%;
+@media(min-width: 1439px){
+    header hr {
+        height: 339px;
     }
-
-    .service p ,
-    .service h3 a{
-        font-size: 20px;
-    }
-
     .sub-img{
         width: 234px;
     }
-}
-@media(max-width: 1439px) {
-    .sub-img{
-        width: 165px;
+
+    .card-text{
+        top: 45%;
     }
+
+    .service p ,
+    .service h3 a{
+        font-size: 19px;
+    }
+}
+@media(max-width: 1045px){
     .card-text{
         top: 26%;
     }
+
     .service p ,
     .service h3 a{
-        font-size: 13px;
+        font-size: 14px;
     }
+
     .practice-box p{
-        font-size: 15px;
+        font-size: 14px;
     }
-    .cm-about{
-        font-size: 13px;
-    }
-}
 
-
-@media(max-width: 1024px) {
-    .card-text{
-        top: 25%;
-    }
     .sub-img{
-        width: 166px;
+        width: 300px;
     }
-
+   
 }
+
+
 /* Start TRablet & under */
-@media (max-width: 992px){
+@media (max-width: 993px){
     .container-md{
         width: 97%;
         margin: 0 auto;
@@ -889,7 +884,7 @@ footer ul a {
     }
     
     .practice-box p{
-      font-size: 23px;
+      font-size: 19px;
     }
 
     .practice-box span{
@@ -944,7 +939,7 @@ footer ul a {
         line-height: 1.8;
     }
     .sub-img{
-        width: 197px;
+        min-width: 245px;
     }
    
     .enter-sub{
@@ -989,7 +984,11 @@ footer ul a {
 }
 /*End Tablet & under */
 
-
+@media (min-width: 601px) and (max-width: 768px){
+    .sub-img{
+        width: 200px;
+    }
+}
 
 /* Start Mobile */
 @media screen and (max-width: 600px){
