@@ -1,4 +1,4 @@
-* , html{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -56,8 +56,9 @@ header{
 }
 /* Start nav */
 nav{
-    height: 100px;
+    height: 70px;
     margin-bottom: 75px;
+    padding: 20px 0;
     width: 100%;
 }
 .nav-fixed{
@@ -65,13 +66,10 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80px;
+    max-width: 100%;
+    height: auto;
     padding: 20px 0;
     color: #000;
-
 }
 
 .nav-fixed a ,
@@ -104,7 +102,7 @@ nav .logo span{
 header hr {
    position: absolute;
    width: 100%;
-   height: 369px;
+   height: 340px;
    color: red;
    z-index: -1;
 }
@@ -159,7 +157,7 @@ header hr {
 .service h3 a{
     color: #fff;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
 }
 .service p {
     color: #302f2f;
@@ -520,7 +518,7 @@ input
 }
 .card-text{
     position: absolute;
-    top: 28%;
+    top: 37%;
     left: 0;
     width: 150px;
     height: 80px;
@@ -578,7 +576,7 @@ input
     display: flex;
 }
 .sub-img{
-    width:170px;
+    width:206px;
     position: relative;
     cursor:zoom-in;
     display: inline-block;  
@@ -703,8 +701,52 @@ footer ul a {
 }
 /* End footer */
 /* **********************responsev**************** */
+/* ********************************* */
+@media(min-width: 1440px){
+    .card-text{
+        top: 42%;
+    }
+
+    .service p ,
+    .service h3 a{
+        font-size: 20px;
+    }
+
+    .sub-img{
+        width: 234px;
+    }
+}
+@media(max-width: 1439px) {
+    .sub-img{
+        width: 165px;
+    }
+    .card-text{
+        top: 26%;
+    }
+    .service p ,
+    .service h3 a{
+        font-size: 13px;
+    }
+    .practice-box p{
+        font-size: 15px;
+    }
+    .cm-about{
+        font-size: 13px;
+    }
+}
+
+
+@media(max-width: 1024px) {
+    .card-text{
+        top: 25%;
+    }
+    .sub-img{
+        width: 166px;
+    }
+
+}
 /* Start TRablet & under */
-@media screen and (max-width: 992px){
+@media (max-width: 992px){
     .container-md{
         width: 97%;
         margin: 0 auto;
@@ -712,9 +754,7 @@ footer ul a {
     .text-center.about{
         height: auto;
     }
-   .about .head-box-link{
-        margin-top: 80%;
-    }
+  
     .grid-md-1{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -733,7 +773,6 @@ footer ul a {
     .head-section h2{
         font-size: 30px;
     }
-  
     header , nav{
         height: auto;
     }
@@ -745,7 +784,7 @@ footer ul a {
     }
    
     nav{
-        background-color: #000;
+        background-color: #000 !important;
         padding-top: 10px !important;
         padding-bottom: 20px !important;
         height: auto;
@@ -757,6 +796,10 @@ footer ul a {
         align-items: center;
         cursor: pointer;
     }
+
+    .nav-fixed a, .nav-fixed .logo {
+        color: #fff;
+    }
     .logo-md.display-md-show i ,
     .logo-md.display-md-show span{
         font-size: 20px;
@@ -766,23 +809,18 @@ footer ul a {
        display: block;
        text-align: left;
     }
-    nav .list-item{
-        display: none;
-        position: absolute;
-        top: 59px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        padding: 15px;
-        background-color: #000;
-        margin-bottom: 15px;
-        z-index: 777;
-    }
+
     nav ul li {
         display: block;
         padding: 10px 0;
     }
-
+    .list-item{
+        background-color: #000;
+        height: 300px;
+        padding: 20px 0;
+        color: #000;
+        display: none;
+    }
     .list-item li a {
         margin: 0;
         color: #fff;
@@ -800,8 +838,14 @@ footer ul a {
         height: 400px;
         margin-top: 15px;
     }
+    .service span{
+        font-size: 30px;
+    }
+    .service p{
+        font-size: 23px;
+    }
     .about-us{
-        margin: 20% auto;
+        margin: 30% auto;
     }
     .about-us.about{
         margin-top: 100px;
@@ -810,15 +854,14 @@ footer ul a {
     .about-img{
         width: 450px;
         height: 400px;
-        margin: 0 auto 10%;
+        margin: 5% auto 10%;
     }
     .about-text{
-        width: 400px;
         height: 350px;
         margin: 0 0 15% 13%;
     }
     .about-text h3{
-        font-size: 30px;
+        font-size: 26px;
         width: 79%;
         margin-bottom: 15px;
     }
@@ -840,7 +883,18 @@ footer ul a {
         width: 400px;
         margin: 5% auto;
     }
+    .practice-box i{
+        font-size: 90px;
 
+    }
+    
+    .practice-box p{
+      font-size: 23px;
+    }
+
+    .practice-box span{
+        font-size: 35px;
+    }
     .back{
         transform: none ;
         background-image: linear-gradient(to top left, #8ad366, #83b582);
@@ -889,6 +943,9 @@ footer ul a {
         font-size: 16px;
         line-height: 1.8;
     }
+    .sub-img{
+        width: 197px;
+    }
    
     .enter-sub{
         height: 120px;
@@ -929,9 +986,6 @@ footer ul a {
     .ft-title {
         font-size: 14px;
     }
-    .nav-fixed{
-        width: 100%;
-    }
 }
 /*End Tablet & under */
 
@@ -939,10 +993,11 @@ footer ul a {
 
 /* Start Mobile */
 @media screen and (max-width: 600px){
-   
+
     .container-md{
         width: 95%;
         margin: 0 auto;
+        position: relative;
     }
     .grid-md-3{
         display: grid;
@@ -956,15 +1011,12 @@ footer ul a {
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
-    nav .list-item{
-        top: 50px;
-        margin: 0;
-    }
+  
     .head-box{
         height: 300px;
     }
     .head-box h1{
-        font-size: 40px;
+        font-size: 28px;
     }
     .head-box-link a{
         font-size: 14px
@@ -983,14 +1035,25 @@ footer ul a {
         margin-left: 100px;
     }
     .about-text{
-        width: 450px;
         height: 350px;
         margin: 0 0 15% 10%;
     }
+    .service span {
+        font-size: 18px;
+    }
+    .service p {
+        font-size: 14px;
+    }
     .about-text p ,
     .practice-box p{
-        width: 58%;
+        width: 80%;
         font-size: 14px;
+    }
+    .practice-box i {
+        font-size: 60px;
+    }
+    .practice-box span {
+        font-size: 23px;
     }
     .practice-box p{
         width: 60%;
@@ -998,10 +1061,12 @@ footer ul a {
     }
     .about-viduo {
         top: 28%;
-        left: 59%;
+        left: 54%;
+        position: absolute;
+        z-index: 2;
     }
     .head-section h2{
-        font-size: 27px;
+        font-size: 22px;
     }
     .title-heading{
         font-size: 30px;
@@ -1021,8 +1086,8 @@ footer ul a {
     }
   
     .enter-sub {
-        max-width: 483px;
         padding: 15px;
+        margin-top: 70px;
     }
     .enter-sub form {
         margin-bottom: 15px;
@@ -1041,9 +1106,6 @@ footer ul a {
     }
     .case-box{
         margin: 50px auto;
-    }
-    .our-blog-card{
-        width: 390px;
     }
     .our-card-img {
         max-width: 450px;
@@ -1068,7 +1130,10 @@ footer ul a {
 }
 
 @media screen and (max-width:500px){
-    
+
+    .nav-fixed{
+        width: 100%;
+    }
     .about-img{
         margin-left: 18px;
     }
@@ -1077,6 +1142,12 @@ footer ul a {
     }
     .enter-sub h3{
         font-size: 20px;
+    }
+    .our-blog-card{
+        width: 350px;
+    }
+    .card-text{
+        top: 46%;
     }
 }
 /*End Mobile */
